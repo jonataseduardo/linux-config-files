@@ -25,6 +25,11 @@ return require('packer').startup(function()
   -- Fugitive for Git
   use { 'tpope/vim-fugitive' }
 
+  -- Prettification
+  use 'junegunn/vim-easy-align'
+  use 'mhartington/formatter.nvim'
+
+  -- tmux navigation
 use({
     "aserowy/tmux.nvim",
     config = function()
@@ -47,5 +52,17 @@ use({
         })
     end
 })
+
+-- REPL 
+use 'kassio/neoterm'
+
+-- Nice Icons
+use 'kyazdani42/nvim-web-devicons'
+
+-- FastFolding 
+use 'Konfekt/FastFold'
+
+-- Folding for python
+use 'tmhedberg/SimpylFold'
 
 end)

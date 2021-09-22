@@ -33,7 +33,7 @@ require('plugins')
 -- require('lsp_lua')
 
 -- Another option is to groups configuration in one folder
--- require('config')
+require('config.neoterm')
 
 -- OR you can invoke them individually here
 --require('config.colorscheme')  -- color scheme
