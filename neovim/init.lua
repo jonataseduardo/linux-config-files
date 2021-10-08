@@ -1,11 +1,22 @@
+--Lua:
+vim.cmd[[colorscheme nord]]
+
 -- Map leader to space
 vim.g.mapleader = ' '
 
 local fn = vim.fn
 local execute = vim.api.nvim_command
 
--- Sensible defaults
--- require('settings')
+-- sensible defaults
+require('settings')
+
+-- personal keymaps (not plugins)
+require('keymaps')
+
+-- Buffer line
+require('feline').setup({preset = 'nord'})
+
+require('nvim-web-devicons').get_icons()
 
 -- Auto install packer.nvim if not exists
 local install_path = vim.fn.stdpath 'data' .. '/site/pack/packer/start/packer.nvim'
