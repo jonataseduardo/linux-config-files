@@ -33,7 +33,7 @@ require('feline').setup({preset = 'nord'})
 
 -- Another option is to groups configuration in one folder
 require('config.neoterm')
-require('config.formatter')
+require('config.format')
 
 -- OR you can invoke them individually here
 --require('config.colorscheme')  -- color scheme
