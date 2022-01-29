@@ -1,5 +1,5 @@
 return require('packer').startup(function()
-    
+
   -- Packer can manage itself as an optional plugin
   use {'wbthomason/packer.nvim', opt = true}
 
@@ -12,8 +12,12 @@ return require('packer').startup(function()
       requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
   }
 
+  -- Post-install/update hook with neovim command
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
   -- LSP and completion
   use { 'neovim/nvim-lspconfig' }
+
   use { 'nvim-lua/completion-nvim' }
 
   -- Lua development
@@ -27,7 +31,9 @@ return require('packer').startup(function()
 
   -- Prettification
   use 'junegunn/vim-easy-align'
-  use 'mhartington/formatter.nvim'
+
+  use 'lukas-reineke/format.nvim'
+
 
   -- tmux navigation
 use({
@@ -53,16 +59,30 @@ use({
     end
 })
 
--- REPL 
+-- REPL
 use 'kassio/neoterm'
 
 -- Nice Icons
 use 'kyazdani42/nvim-web-devicons'
 
--- FastFolding 
+-- FastFolding
 use 'Konfekt/FastFold'
 
 -- Folding for python
 use 'tmhedberg/SimpylFold'
+
+-- Status line
+use 'famiu/feline.nvim'
+
+-- Git symbols
+use {
+  'lewis6991/gitsigns.nvim',
+  requires = {
+    'nvim-lua/plenary.nvim'
+  }
+}
+
+-- Colorscheme
+use 'shaunsingh/nord.nvim'
 
 end)
